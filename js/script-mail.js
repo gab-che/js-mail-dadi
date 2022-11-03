@@ -21,3 +21,10 @@ coolButton.addEventListener("click", function (){
         console.log("Mi dispiace, non sei abbastanza cool");
     }
 })
+
+const tryAgain = document.getElementById("try_again");
+
+tryAgain.addEventListener("click", function (){
+    const userEmail = document.getElementById("user_email");
+    userEmail.value = "";
+})
