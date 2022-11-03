@@ -1,12 +1,23 @@
-const emailList = ["ciao@gmail.com", "ciaociao@gmail.com", "ciaociaociao@gmail.com"];
+const coolButton = document.getElementById("cool_button")
 
-const userEmail = prompt("Inserisci la tua email:");
+coolButton.addEventListener("click", function (){
+    const emailList = ["ciao@gmail.com", "ciaociao@gmail.com", "ciaociaociao@gmail.com"];
 
-let coolEmail;
+    const userEmail = document.getElementById("user_email").value;
 
-for (let x = 0; x < emailList.length; x++){
-    coolEmail = x;
-    if (userEmail === emailList[coolEmail]){
-        alert("Complimenti! Fai parte del club esclusivo.");
+    let found;
+
+    for (let x = 0; x < emailList.length; x++){
+        const coolEmail = emailList[x];
+
+        if (coolEmail === userEmail){
+            found = true;
+        }
     }
-}
+
+    if (found){
+        console.log("Complimenti! Fai parte del club esclusivo.");
+    } else{
+        console.log("Mi dispiace, non sei abbastanza cool");
+    }
+})
